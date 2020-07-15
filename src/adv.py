@@ -1,4 +1,11 @@
+# room == name of the file - room namespace/library/module
+# Room == Room class from the room.py file
 from room import Room
+from player import Player
+# from item import Item
+# from item import Lamp
+# from item import Treasure
+# from item import Diamond
 
 # Declare all the rooms
 
@@ -49,3 +56,31 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+# input .strip() - avoids having error when the user's input has empty spaces or tabs
+
+# Create a player 
+# Let player input their name
+
+player = Player(input("Please enter your name: "), room['outside'])
+print(player.current_room)
+
+print(player.name)
+
+print(room['outside'].n_to)
+
+directions = ["n", "s", "e", "w"]
+
+# Create basic REPL loop 
+while True:
+    # Read command 
+    cmd = input("~~> ").lower()
+    # Check if it's n/s/e/w/q
+    if cmd in directions:
+        # Make player travel in that direction
+        player.travel(cmd)
+    elif cmd == "q":
+        print("Goodbye!")
+        exit()
+    else:
+        print("I did not recognize that command")
+    # If so, execute the proper command
