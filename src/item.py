@@ -30,6 +30,59 @@
 #         print(f"\nYou have dropped the {self.name}.")
         
 #     def __getattr__(self, name):
-#         pass
+#         """
+#         Defaults to None for any attribute not in the calss currently supported
+#         """
+#         return None
+    
+#     def __str__(self):
+#         """ 
+#         Replacement string method for the Item class
+#         """
+#         return f"{self.name} - {self.description}"
+    
+#     def __repr__(self):
+#         """
+#         REPR method for the Item class
+#         """
+#         return f"Item({repr(self.name)}, {repr(self.description)})"
+    
+# class Lamp(Item):
+#     def __init__(self, name, description, color):
+#         super().__init__(name, description)
+#         self.color = color
         
+#     def __str__(self):
+#         """
+#         Replacement string method for the Lamp class
+#         """
+#         return f"{self.name} - {self.color}, {self.description}"
+    
+#     def __repr__(self):
+#         """
+#         REPR method for the Lamp class
+#         """
+#         return f"Lamp({repr(self.name)}, {repr(self.description)}, {repr(self.color)})"
+    
+# class Treasure(Item):
+#     def __init__(self, name, description, value):
+#         super().__init__(name, description)
+#         self.value = value_error
         
+#     def __str__(self): 
+#         """
+#         Replacement string method for the Treasure class
+#         """
+#         return f"{self.name} - {self.value}, {self.description}"
+    
+#     def __repr__(self):
+#         """
+#         REPR method for the Treasure class
+#         """
+#         return f"Treasure({repr(self.name)}, {repr(self.description)}, {repr(self.value)})"
+    
+#     def __repr__(self):
+#         """
+#         REPR method for the Diamond class
+#         """
+#         return f"Diamond({repr(self.name)}, {repr(self.description)}, {repr(self.value)}, {repr(self.color)})"

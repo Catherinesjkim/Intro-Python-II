@@ -7,7 +7,7 @@ class Player:
     # Init player with name 
     def __init__(self, name, starting_room):
         self.name = name
-        # Player also has attr current_room
+        # Player also has attr current_room - every player needs to be in a room to start playing 
         self.current_room = starting_room
     
     def travel(self, direction):
